@@ -1,0 +1,158 @@
+* {
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+    background-image:url(https://i.kym-cdn.com/photos/images/original/001/641/059/765.gif);
+    background-size: 1900px 1000px; 
+    font-family:'Audiowide', cursive;;
+    color:white;
+    font-size: 10px;
+  }
+
+  @media (min-width: 400px) {
+   body{
+     font-size: 14px;
+   }
+  }
+
+  header{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } 
+
+  .menu{
+    background-color:#87CEEB;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    z-index: 1;
+  }
+  
+  .menu ul{
+    display:flex;
+    justify-content:space-around;
+  }
+  
+  .menu li{
+    list-style:none;
+  } 
+
+  .menu a{
+    display: block;
+    padding: 10px 20px;
+    transition: background-color color 1s, color 1s;
+  }
+
+  .menu a:active,
+  .menu a:hover {
+    background-color: white;
+    color:#87CEEB;
+  }
+
+  a {
+    color:#000000;
+    text-decoration:none;
+  }
+
+  .titulo {
+    transform: scale(0.2) translateY(30vh);
+    opacity: 0;
+    animation: linear 2s animaçãotitulo forwards;
+  }
+  
+    @keyframes animaçãotitulo {
+      0% {
+      transform: scale(0.2) translateY(30vh);
+      opacity: 0;
+      }
+      100% {
+      transform: scale(1) translateY(0);
+      opacity: 1;
+      }
+    }
+
+  .site-subtitle,
+  .site-title {
+    text-align:center;
+    color:#87CEEB;
+    font-family: 'Press Start 2P', cursive;
+    line-height: 1.5em;
+  }
+  
+  .sobre,
+  .projetos{
+    padding: 2em;
+    min-height: 100vh;
+    }
+
+  .sobre h2,
+  .projetos h2 {
+    font-family: 'Press Start 2P', cursive;
+    color:#87CEEB;
+    margin-bottom: 2em;
+  }
+
+  .sobre p {
+    color: white;
+    margin-bottom: 1.5em; 
+    text-indent: 1.5em;
+    text-align: justify;
+    }
+
+  .sobre a{
+    color: blue;
+  }   
+
+ .sobre .avatar {
+  float: left;
+  margin-right: 2em;
+  } 
+
+ .sobre {
+   background-color:  rgb(255, 102, 0);
+ }
+
+ .projetos{
+    background-color: rgb(255, 102, 0);
+    padding: 2em;
+  }
+
+  .projetos figure{
+    text-align: center;
+  }
+
+  .projetos .grid{
+    display: grid;
+    gap: 3em;
+  }
+
+  @media (min-width: 560px) {
+    .projetos .grid {
+      grid-template-columns: 240px 240px;
+    }
+  }
+
+  @media (min-width: 880px) {
+    .projetos .grid {
+      grid-template-columns: repeat(3, 240px);
+      align-content: center;
+      justify-content: center;
+    }
+  }
+
+ .projetos a:active,
+ .projetos a {
+  color: #87CEEB;
+  font-size: 17em;
+  transition: text-shadow 1ms;
+ } 
+
+.projetos a:hover{
+ text-decoration: none;
+ text-shadow: 0px 0px 50px rgba(255, 255, 255, 0.5);
+}
